@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valeryn Garcia - Técnico Laboral en Mercadeo y Publicidad</title>
+    <meta name="description" content="Portafolio profesional de Valeryn Garcia, Técnico Laboral en Mercadeo y Publicidad. Descubre mis proyectos y experiencia en marketing digital y publicidad.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Base Styles & Reset */
+        :root {
+            --primary-color: #87CEEB; /* Sky Blue */
+            --secondary-color: #FFFFFF; /* White */
+            --text-color: #333333; /* Dark Grey */
+            --light-grey: #f8f8f8;
+            --dark-grey: #555555;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+            --border-radius: 8px;
+            --transition-speed: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--secondary-color);
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            color: var(--dark-grey);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-heading {
+            font-family: var(--font-heading);
+            font-size: 2.8em;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: var(--border-radius);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color var(--transition-speed), color var(--transition-speed), transform var(--transition-speed);
+            border: 2px solid transparent;
+            text-align: center;
+        }
+
+        .button-primary {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .button-primary:hover {
+            background-color: #6bb0d8; /* Slightly darker primary */
+            transform: translateY(-3px);
+        }
+
+        .button-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .button-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Header & Navigation */
+        .header {
+            background-color: var(--secondary-color);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: transform var(--transition-speed);
+        }
+
+        .header.hidden {
+            transform: translateY(-100%);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--dark-grey);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width var(--transition-speed);
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-color);
+            transition: all var(--transition-speed);
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://placehold.co/1920x1080/E0F2F7/333333?text=Fondo+Hero') center center / cover no-repeat;
+            /* Replace with your image: url('images/hero-background.jpg') */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 20px;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 4.5em;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .hero-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2em;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--dark-grey);
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 0;
+            background-color: var(--secondary-color);
+            transition: background-color var(--transition-speed);
+        }
+
+        section:nth-of-type(even) {
+            background-color: var(--light-grey);
+        }
+
+        /* About Me Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid var(--primary-color);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-text h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: var(--dark-grey);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .skill-category {
+            background-color: var(--secondary-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform var(--transition-speed);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+
+        .skill-name {
+            flex-grow: 1;
+            font-weight: 600;
+            color: var(--dark-grey);
+        }
+
+        .skill-bar-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            height: 8px;
+            overflow: hidden;
+        }
+
+        .skill-bar {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            width: 0; /* Will be set by JS or inline style */
+            transition: width 1s ease-out;
+        }
+
+        /* Experience & Education Sections */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--primary-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+            width: 50%;
+            padding: 10px 40px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary-color);
+            border: 4px solid var(--secondary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.5);
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -8px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -8px;
+        }
+
+        .timeline-content {
+            background-color: var(--secondary-color);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform var(--transition-speed);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-content h4 {
+            font-family: var(--font-heading);
+            font-size: 1.4em;
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+
+        .timeline-content p.company-name,
+        .timeline-content p.institution-name {
+            font-style: italic;
+            color: var(--dark-grey);
+            margin-bottom: 5px;
+        }
+
+        .timeline-content p.dates {
+            font-size: 0.9em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .timeline-content ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: var(--dark-grey);
+        }
+
+        .timeline-content ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform var(--transition-speed);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.6em;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .project-info p {
+            font-size: 0.95em;
+            color: var(--dark-grey);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .project-info .technologies {
+            font-size: 0.85em;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: auto; /* Push buttons to the bottom */
+        }
+
+        .project-buttons .button {
+            padding: 10px 20px;
+            font-size: 0.9em;
+            flex: 1;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .contact-form {
+            flex: 2;
+            min-width: 300px;
+            background-color: var(--secondary-color);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: var(--text-color);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-grey);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: var(--font-body);
+            font-size: 1em;
+            transition: border-color var(--transition-speed);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(135, 206, 235, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-info-block {
+            flex: 1;
+            min-width: 250px;
+            background-color: var(--secondary-color);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-info-block h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: var(--text-color);
+        }
+
+        .contact-info-block p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: var(--dark-grey);
+        }
+
+        .contact-info-block a {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            font-size: 1.8em;
+            color: var(--dark-grey);
+            transition: color var(--transition-speed);
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--text-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .section-heading {
+                font-size: 2.2em;
+            }
+
+            .hero-content h1 {
+                font-size: 3.5em;
+            }
+
+            .hero-content h2 {
+                font-size: 1.8em;
+            }
+
+            .hero-content p {
+                font-size: 1.1em;
+            }
+
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .timeline::before {
+                left: 20px; /* Adjust for mobile */
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 60px;
+                padding-right: 10px;
+                left: 0 !important; /* Override specific left for mobile */
+                text-align: left !important; /* Override specific text-align for mobile */
+            }
+
+            .timeline-item::after {
+                left: 12px !important; /* Adjust for mobile */
+            }
+
+            .timeline-item:nth-child(odd)::after {
+                right: auto; /* Reset right for mobile */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 0;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px; /* Adjust based on header height */
+                left: 0;
+                width: 100%;
+                background-color: var(--secondary-color);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+                padding: 20px 0;
+                border-top: 1px solid #eee;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 10px 20px;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .menu-toggle.active span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+
+            .hero-content h1 {
+                font-size: 2.8em;
+            }
+
+            .hero-content h2 {
+                font-size: 1.5em;
+            }
+
+            .hero-content p {
+                font-size: 1em;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .contact-content {
+                flex-direction: column;
+            }
+
+            .contact-form,
+            .contact-info-block {
+                width: 100%;
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-heading {
+                font-size: 1.8em;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+
+            .hero-content h2 {
+                font-size: 1.2em;
+            }
+
+            .button {
+                padding: 12px 20px;
+                font-size: 0.9em;
+            }
+
+            .project-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container nav-content">
+            <a href="#hero" class="logo">Valeryn<span>.</span></a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Inicio</a>
+                <a href="#about" class="nav-link">Sobre Mí</a>
+                <a href="#skills" class="nav-link">Habilidades</a>
+                <a href="#experience" class="nav-link">Experiencia</a>
+                <a href="#education" class="nav-link">Educación</a>
+                <a href="#portfolio" class="nav-link">Proyectos</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+            </nav>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="fade-in-on-scroll">Tu visión, nuestra estrategia, tu crecimiento digital</h1>
+            <h2 class="fade-in-on-scroll">Valeryn Garcia | Técnico Laboral en Mercadeo y Publicidad</h2>
+            <p class="fade-in-on-scroll">Prepárate para ser el arquitecto de marcas exitosas, conectando productos con personas y generando impacto a través de estrategias creativas. Conviértete en un experto que entiende al consumidor y transforma ideas en resultados medibles. Impulsa el crecimiento empresarial y la relevancia social con tu visión estratégica y comunicativa.</p>
+            <div class="hero-buttons fade-in-on-scroll">
+                <a href="#portfolio" class="button button-primary">Ver Mis Proyectos</a>
+                <a href="cv/valeryn_garcia_cv.pdf" download class="button button-secondary">Descargar CV</a>
+                </div>
+        </div>
+    </section>
+
+    <section id="about" class="fade-in-on-scroll">
+        <div class="container">
+            <h2 class="section-heading">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://placehold.co/300x300/87CEEB/FFFFFF?text=Mi+Foto" alt="Valeryn Garcia - Foto Profesional">
+                    </div>
+                <div class="about-text">
+                    <h3>Mi Recorrido Profesional</h3>
+                    <p>Mi recorrido profesional en el mundo de la publicidad y el marketing digital ha sido una constante evolución, donde cada proyecto me ha permitido afinar mi habilidad para conectar marcas con audiencias.</p>
+                    <p>He transitado desde 2023 hasta 2025 la creación y ejecución de campañas publicitarias integrales para clientes de alto perfil. Esta trayectoria me ha dotado de una visión 360° del ecosistema digital, permitiéndome entender no solo las tendencias, sino cómo aplicarlas estratégicamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="fade-in-on-scroll">
+        <div class="container">
+            <h2 class="section-heading">Mis Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Habilidades Técnicas</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Creación de Contenido</span>
+                        <div class="skill-bar-container"><div class="skill-bar" data-level="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Campañas Publicitarias</span>
+                        <div class="skill-bar-container"><div class="skill-bar" data-level="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SEO</span>
+                        <div class="skill-bar-container"><div class="skill-bar" data-level="75"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Creación de Diseño</span>
+                        <div class="skill-bar-container"><div class="skill-bar" data-level="80"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Herramientas</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Microsoft Excel</span>
+                        <div class="skill-bar-container"><div class="skill-bar" data-level="80"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Adobe Illustrator</span>
+                        <div class="skill-bar-container"><div class="skill-bar" data-level="70"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Adobe Photoshop</span>
+                        <div class="skill-bar-container"><div class="skill-bar" data-level="75"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Habilidades Blandas</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Comunicación Efectiva</span>
+                        <div class="skill-bar-container"><div class="skill-bar" data-level="95"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Trabajo en Equipo</span>
+                        <div class="skill-bar-container"><div class="skill-bar" data-level="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Liderazgo</span>
+                        <div class="skill-bar-container"><div class="skill-bar" data-level="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Adaptabilidad</span>
+                        <div class="skill-bar-container"><div class="skill-bar" data-level="90"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="fade-in-on-scroll">
+        <div class="container">
+            <h2 class="section-heading">Experiencia Laboral</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Comercial en Mercadeo y Publicidad</h4>
+                        <p class="company-name">Potencia tu Marca</p>
+                        <p class="dates">2023 - 2025</p>
+                        <ul>
+                            <li>Diseñar, implementar y gestionar campañas integrales de marketing digital.</li>
+                            <li>Ejecutar publicidad pagada en plataformas como Facebook, Instagram y TikTok.</li>
+                            <li>Analizar métricas de rendimiento para optimizar campañas y alcanzar objetivos.</li>
+                            <li>Colaborar con equipos creativos para desarrollar contenido publicitario atractivo.</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="education" class="fade-in-on-scroll">
+        <div class="container">
+            <h2 class="section-heading">Formación Académica</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Técnico Laboral en Mercadeo y Publicidad</h4>
+                        <p class="institution-name">Politécnico de Occidente</p>
+                        <p class="dates">2023 – 2025</p>
+                        <ul>
+                            <li>Enfoque en estrategias de marketing digital y tradicional.</li>
+                            <li>Desarrollo de habilidades en análisis de mercado y comportamiento del consumidor.</li>
+                            <li>Proyectos prácticos en creación de campañas y gestión de marca.</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="fade-in-on-scroll">
+        <div class="container">
+            <h2 class="section-heading">Mis Proyectos</h2>
+            <div class="portfolio-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400/87CEEB/FFFFFF?text=Proyecto+1" alt="Imagen del Proyecto 1">
+                        </div>
+                    <div class="project-info">
+                        <h3>El Arte de Conectar</h3>
+                        <p>El objetivo de nuestro proyecto es crear estrategias para llamar la atención del público tanto físico como en plataformas de e-commerce desarrolladas, donde implementé el carrito de compras y la pasarela de pagos.</p>
+                        <div class="technologies">Tecnologías Utilizadas: CRM, Herramientas de análisis web y datos, Herramientas de SEO, Publicidad programática y optimización de campañas</div>
+                        <div class="project-buttons">
+                            <a href="#" target="_blank" class="button button-primary">Ver Proyecto en Vivo</a>
+                            <a href="#" target="_blank" class="button button-secondary">Ver Código en GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400/ADD8E6/333333?text=Proyecto+2" alt="Imagen del Proyecto 2">
+                        </div>
+                    <div class="project-info">
+                        <h3>Estrategia de Contenido Digital</h3>
+                        <p>Desarrollo de una estrategia integral de contenido para redes sociales, incluyendo la creación de calendarios editoriales, diseño de piezas gráficas y análisis de rendimiento para una marca de moda local.</p>
+                        <div class="technologies">Tecnologías Utilizadas: Canva, Later, Google Analytics, Hootsuite</div>
+                        <div class="project-buttons">
+                            <a href="#" target="_blank" class="button button-primary">Ver Proyecto en Vivo</a>
+                            <a href="#" target="_blank" class="button button-secondary">Ver Código en GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x400/B0E0E6/333333?text=Proyecto+3" alt="Imagen del Proyecto 3">
+                        </div>
+                    <div class="project-info">
+                        <h3>Campaña de Lanzamiento de Producto</h3>
+                        <p>Gestión completa de una campaña de lanzamiento para un nuevo producto tecnológico, abarcando desde la investigación de mercado, segmentación de audiencia, hasta la ejecución de anuncios y relaciones públicas.</p>
+                        <div class="technologies">Tecnologías Utilizadas: Google Ads, Facebook Ads, Mailchimp, CRM</div>
+                        <div class="project-buttons">
+                            <a href="#" target="_blank" class="button button-primary">Ver Proyecto en Vivo</a>
+                            <a href="#" target="_blank" class="button button-secondary">Ver Código en GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in-on-scroll">
+        <div class="container">
+            <h2 class="section-heading">Hablemos</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Envía un Mensaje</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto (Opcional)</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="button button-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="contact-info-block">
+                    <h3>Información de Contacto</h3>
+                    <p>Estoy disponible para nuevos proyectos y colaboraciones. ¡No dudes en contactarme!</p>
+                    <p>Email: <a href="mailto:valesingrid3@gmail.com">valesingrid3@gmail.com</a></p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" title="Behance"><i class="fab fa-behance-square"></i></a>
+                        <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter-square"></i></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Valeryn Garcia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = document.querySelector('.header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+
+                        // Close mobile menu if open
+                        const navMenu = document.getElementById('navMenu');
+                        const menuToggle = document.getElementById('menuToggle');
+                        if (navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                            menuToggle.classList.remove('active');
+                        }
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Active navigation link highlighting on scroll
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const header = document.getElementById('header');
+            let lastScrollY = window.scrollY;
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-50% 0px -50% 0px', // Adjust this margin to fine-tune active section detection
+                threshold: 0 // No threshold needed, as rootMargin defines the active area
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${entry.target.id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Hide/show header on scroll
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > lastScrollY && window.scrollY > header.offsetHeight) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+                lastScrollY = window.scrollY;
+            });
+
+            // Skill bars animation on scroll
+            const skillBars = document.querySelectorAll('.skill-bar');
+            const skillsSection = document.getElementById('skills');
+
+            const skillObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        skillBars.forEach(bar => {
+                            const level = bar.getAttribute('data-level');
+                            bar.style.width = `${level}%`;
+                        });
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+
+            if (skillsSection) {
+                skillObserver.observe(skillsSection);
+            }
+
+            // Fade-in on scroll animation for sections
+            const fadeElements = document.querySelectorAll('.fade-in-on-scroll');
+
+            const fadeInObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        fadeInObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }); // Adjust threshold as needed
+
+            fadeElements.forEach(el => {
+                fadeInObserver.observe(el);
+            });
+
+            // Initialize hero section animation
+            const heroContentElements = document.querySelectorAll('.hero-content > *');
+            heroContentElements.forEach((el, index) => {
+                el.style.animationDelay = `${0.2 * index}s`;
+            });
+        });
+    </script>
+</body>
+</html>
